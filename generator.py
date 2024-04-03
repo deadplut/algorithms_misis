@@ -18,7 +18,7 @@ class Generator:
         ##########################
         sample_size = 0
 
-
+        print(1)
         self.write_to_file('Тест 1.1: Массивы случайных чисел 10')
         array = self.generate_random_array(10, sample_size,)
         self.sort_test(array, 20, sample_size)
@@ -39,6 +39,8 @@ class Generator:
         #########################
         # ТЕСТЫ массивы, включающие несколько отсортированных последовательностей (вторая группа
         ##########################
+        print(2)
+
         sample_size = 10
         self.write_to_file('Тест 2.1: Массивы случайных чисел 10')
         array = self.generate_random_array(10, sample_size,)
@@ -61,6 +63,8 @@ class Generator:
         #########################
         # ТЕСТЫ массивы, включающие несколько отсортированных последовательностей (третья группа)
         ##########################
+        print(3)
+
         sample_size = 10
         self.write_to_file('Тест 3.1: Массивы случайных чисел 10')
         array = self.generate_array_3_group(10)
@@ -82,6 +86,8 @@ class Generator:
         #########################
         # ТЕСТЫ 4 отсортированные в прямом и обратном порядке
         ##########################
+        print(4)
+
         sample_size = 10
         self.write_to_file('Тест 4.1: Массивы случайных чисел 10')
         self.write_to_file('ASC')
@@ -126,6 +132,7 @@ class Generator:
         #########################
         # ТЕСТЫ массивы и тесты с большим количеством повторений одного элемента (10%, 25%, 50%, 75% и 90%).
         ##########################
+        print(5)
         sample_size = 10
         percent_of_repeated_numbers = 10
 

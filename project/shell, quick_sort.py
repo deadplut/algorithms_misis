@@ -38,7 +38,7 @@ def quick_sort(arr):
         else:
             greater += [arr[i]]
 
-    # print(quick_sort(less) + equal + quick_sort(greater))
+
     return quick_sort(less) + equal + quick_sort(greater)
 
 

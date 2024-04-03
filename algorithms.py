@@ -58,30 +58,25 @@ class MergeSort(Generator):
 
 
 
-class ShellSort(Generator):
-    """
-    Сортировка слиянием
-    """
+
+class QuickSort(Generator):
     def sort_method(self, array):
-        return self.shell_sort(array)
+        return self.quick_sort(array)
+    def quick_sort(self, arr):
+        if len(arr) < 2:
+            return arr
 
+        supporter = int(len(arr) / 2)
+        less = []
+        greater = []
+        equal = []
+        for i in range(len(arr)):
+            if arr[i] < arr[supporter]:
+                less += [arr[i]]
+            elif arr[i] == arr[supporter]:
+                equal += [arr[i]]
+            else:
+                greater += [arr[i]]
 
-    @staticmethod
-    def simple_insert_sort(arr, step):
-        for i in range(step, len(arr)):
-            c = arr[i]
-            j = i - step
-            while j >= 0 and arr[j] >= c:
-                arr[j + step] = arr[j]
-                j -= step
-            arr[j + step] = c
-
-    def shell_sort(self, arr):
-        step = int(len(arr) / 2)
-
-        while step >= 1:
-            self.simple_insert_sort(arr, step)
-            step = int(step / 2)
-
-        return arr
+        return self.quick_sort(less) + equal + self.quick_sort(greater)
 
