@@ -1,21 +1,4 @@
-"""
-Шаги или процедура алгоритма сортировки оболочки следующие:
 
-Шаг 1) Инициализируйте значение интервала, h = n/2. (В этом примере n — размер массива)
-
-Шаг 2) Поместите все элементы в пределах интервала h в подсписок.
-
-Шаг 3) Отсортируйте эти подсписки, используя сортировку вставкой.
-
-Шаг 4) Установите новый интервал, h=h/2.
-
-Шаг 5) Если h>0, переходим к шагу 2. В противном случае переходим к шагу 6.
-
-Шаг 6) Результатом будет отсортированный массив.
-"""
-
-
-#
 #
 def simple_insert_sort(arr, step):
     for i in range(step, len(arr)):
@@ -34,22 +17,9 @@ def shell_sort(arr):
     while step >= 1:
         simple_insert_sort(arr, step)
         step = int(step / 2)
-    print(arr)
+
     return arr
 
-
-def insert_element(arr, number, place_index):
-    return arr[:place_index] + [number] + arr[place_index:]
-
-
-def delete_element(arr, el_index):
-    return arr[:el_index] + arr[el_index + 1:]
-
-
-def move_element(arr, el_index, place_index):
-    number = arr[el_index]
-    arr = delete_element(arr, el_index)
-    return insert_element(arr, number, place_index)
 
 
 def quick_sort(arr):

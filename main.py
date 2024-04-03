@@ -1,6 +1,8 @@
-from algorithms import MergeSort
+from algorithms import MergeSort, ShellSort
+
 output_file = 'results.txt'
-a = MergeSort(output_file)
+# a = MergeSort(output_file)
+a = ShellSort(output_file)
 a.run_tests()
 
 
